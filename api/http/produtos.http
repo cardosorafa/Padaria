@@ -1,0 +1,54 @@
+//Testes da API da Livraria - Livros
+@baseURL = http://localhost:4000/api/produtos
+
+###
+// GET - Obtém todos os produtos
+GET {{baseURL}}
+Content-Type:  application/json
+
+###
+// POST - Insere um novo produto
+POST {{baseURL}}
+Content-Type: application/json
+
+{      
+    "COD": "4",
+    "descricao" : "Chocotone Bauducco",
+    "preco" : 12.50,
+    "unidade": "UND",
+    "datafabricacao": "2014-07-02",
+    "datavalidade": "2014-07-02",
+    "estoque": 20,
+    "fornecedor": "Pandurata Alimentos", 
+    "categoria": ["Doce", "Medianamente Perecivel"],
+    "ingredientes": ["N/A"]
+}
+
+###
+// GET /id - Obtém o produto pelo Nome
+GET {{baseURL}}/id/4
+Content-Type:  application/json
+
+###
+// Put - Altera um produto
+PUT {{baseURL}}/1
+Content-Type: application/json
+
+{
+    "COD": 1,
+    "descricao" : "Pao Especial",
+    "preco" : 12.50,
+    "unidade": "UND",
+    "datafabricacao": "2014-07-02",
+    "datavalidade": "2014-07-02",
+    "estoque": 20,
+    "fornecedor": "Pandurata Alimentos", 
+    "categoria": ["Doce", "Medianamente Perecivel"],
+    "ingredientes": ["N/A"]
+
+}
+
+###
+// DELETE - Remove o produto
+DELETE {{baseURL}}/1
+Content-Type: application/json
