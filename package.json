@@ -13,13 +13,14 @@
     "nodejs",
     "express"
   ],
-  "author": "Rafael Cardoso,João Paulo, Patrick",
+  "author": "Rafael Cardoso,João Paulo, Patrick de Oliveira Silva",
   "license": "MIT",
   "dependencies": {
     "backend": "file:",
     "express": "^4.19.2",
     "express-validator": "^7.2.0",
-    "mongodb": "^6.8.1"
+    "mongodb": "^6.8.1",
+    "sweetalert2": "^11.14.5"
   },
   "devDependencies": {
     "nodemon": "^3.1.5"

@@ -3,6 +3,9 @@ import express from "express";
 import { MongoClient } from "mongodb";
 /* Importar o express-validator */
 import { check, validationResult } from "express-validator";
+import swal from 'sweetalert2';
+
+
 
 /* Definido as variáveis de conexão */
 const uri = "mongodb://localhost:27017";
@@ -59,9 +62,6 @@ const validaProduto = [
   check("unidade")
     .isIn(unidadesValidas)
     .withMessage("Unidade de medida deve ser KG, G ou UND"),
-  check("datafabricacao")
-    .isISO8601()
-    .withMessage("A data deve estar no formato YYYY-MM-DD"),
   check("datavalidade")
     .isISO8601()
     .withMessage("A data deve estar no formato YYYY-MM-DD"),

@@ -3,81 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Padaria</title>
+    <title>Padaria Larica</title>
     <!-- CSS -->
      <link rel="stylesheet" href="css/estilo.css" />
+     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <div class="crud-container">
-    <img src="images/undraw_books.svg" alt="Produtos"
-    height="100" />
+    <img src="images/head.jpg" alt="Produtos"
+    height="350" width="100%" />
     <h1>Gerenciamento de Produtos</h1>
     <!-- formulário de livros -->
      <form id="produtoForm">
         <input type="text" id="COD" maxlength="17" class="input-field " placeholder="Código">
         <input type="text" id="descricao" placeholder="Descricao do Produto" class="input-field">
-        <input type="number" id="preco" placeholder="Preço" class="input-field">
+        <input type="number" id="preco" placeholder="Preço" class="input-field" step=".01">
         <input type="text" id="unidade" placeholder="Unidade de Medida" class="input-field">
-        <input type="number" id="estoque" placeholder="Qtd.Estoque" class="input-field">
-        <input type="date" id="datafabricacao" class="input-field">
         <input type="date" id="datavalidade" class="input-field">
+        <input type="number" id="estoque" placeholder="Quantidade em Estoque" class="input-field">
+        <input type="text" id="fornecedor" placeholder="Fornecedor" class="input-field">
         <input type="text" id="categoria" placeholder="Categoria (separe por vírgula)" class="input-field">
         <input type="text" id="ingredientes" placeholder="Ingredientes (separe por vírgula)" class="input-field">
         <!-- avaliação com estrelas -->
-         <label for="rating">Sucesso de Vendas do Produto</label>
-         <div class="rating">
-            <label>
-                <input type="radio" name="avaliacao" value="★">
-                <span class="icon">★</span>
-            </label>
-            <label>
-                <input type="radio" name="avaliacao" value="★★">
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-            </label>
-            <label>
-                <input type="radio" name="avaliacao" value="★★★">
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-            </label>
-            <label>
-                <input type="radio" name="avaliacao" value="★★★★">
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-            </label>
-            <label>
-                <input type="radio" name="avaliacao" value="★★★★">
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-                <span class="icon">★</span>
-            </label>
-         </div>
+         
         <!-- botão -->
          <button type="submit" id="btnSalvar">💾 Salvar Livro</button>
      </form>
      <!-- Tabela dos livros -->
-      <table id="produtosTable">
-        <thead>
-            <tr>
-                <th>Código</th>
-                <th>Descricao</th>
-                <th>Preco</th>
-                <th>unidade</th>
-                <th>Data de Fabricação</th>
-                <th>Data de Validade</th>
-                <th>Quantidade em Estoque</th>
-                <th>Fornecedor</th>
-                <th>Categoria</th>
-                <th>Ingredientes</th>
-
-            </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+        <div class="tabela">
+            <table id="produtosTable">
+                <thead>
+                    <tr>
+                        <th class="small-button">Opções</th>
+                        <th>Código</th>
+                        <th>Descricao</th>
+                        <th>Preco</th>
+                        <th>unidade</th>
+                        <th>Data de Validade</th>
+                        <th>Quantidade em Estoque</th>
+                        <th>Fornecedor</th>
+                        <th>Categoria</th>
+                        <th>Ingredientes</th>
+                        
+                    </tr>    
+                </thead>
+                <tbody></tbody>
+            </table>
 </div>
 <script src="js/produtos.js"></script>
 </body>

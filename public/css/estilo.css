@@ -1,29 +1,332 @@
-/* Estilo do Projeto */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Reset básico para melhorar a consistência entre navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
 body {
-    background: #FFFFFF;
-    color: #000000;
-    font-family: 'Montserrat','Arial';
+    background-image: url('background.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat; /* Evita que a imagem se repita */ 
+    background-position: center;
+
 }
 
-table{
-    background: #F0E1C0;
-    width: 50%; /*largura*/
+/* Container principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-th {
-    background: #FFE3E8;
-    padding: 8px;
+/* Estilo da página de login */
+.login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-p{
-    margin-bottom: 32px;
-}
-/* Classes CSS */
-.preco{
-    text-align: right; /* alinhamento do texto */
+.login-container h2 {
+    font-size: 24px;
+    color: #8B4513;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.foto{
-    height: 100px;
+.login-container input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
 }
+
+.login-container input:focus {
+    border-color: #8B4513;
+    outline: none;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    background-color: #A0522D;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+    background-color: #692d02;
+}
+
+.delete{
+    color: #ef4444;
+}
+
+.error-message {
+    color: #ef4444;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Estilo do CRUD de livros */
+.crud-container {
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.crud-container h1 {
+    font-size: 28px;
+    color: #A0522D;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.crud-container input, .crud-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.crud-container input:focus {
+    border-color: #A0522D;
+    outline: none;
+}
+
+.crud-container button {
+    background-color: #A0522D;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.crud-container button:hover {
+    background-color: #692d02;
+}
+.tabela
+{
+    overflow-x: auto;
+}
+
+/* Estilo da tabela de livros */
+table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 14px;
+    color: #692d02;
+    width: 50;
+    align-items: center;
+   
+    
+}
+
+
+table th {
+    background-color: #f1f5f9;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    
+    
+}
+
+table tr:nth-child(even) {
+    background-color: #f9fafb;
+
+}
+
+table tr:hover {
+    background-color: #e0f2fe;
+    cursor: pointer;
+
+}
+
+button.edit, button.delete {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button.edit {
+    background-color: #A0522D;
+    color: white;
+}
+
+button.edit:hover {
+    background-color: #692d02;
+}
+
+button.delete {
+    background-color: #ef4444;
+    color: white;
+}
+
+button.delete:hover {
+    background-color: #dc2626;
+}
+/* Estilo para a imagem no formulário de login */
+.login-container .login-image {
+    display: block;
+    margin: 0 auto 20px auto; /* Centraliza a imagem e adiciona espaçamento */
+    max-width: 150px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo de Avaliação por Estrelas */
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+  }
+  
+  .rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+  }
+  
+  .rating label:last-child {
+    position: static;
+  }
+  
+  .rating label:nth-child(1) {
+    z-index: 5;
+  }
+  
+  .rating label:nth-child(2) {
+    z-index: 4;
+  }
+  
+  .rating label:nth-child(3) {
+    z-index: 3;
+  }
+  
+  .rating label:nth-child(4) {
+    z-index: 2;
+  }
+  
+  .rating label:nth-child(5) {
+    z-index: 1;
+  }
+  
+  .rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+  
+  .rating label .icon {
+    float: left;
+    color: transparent;
+  }
+  
+  .rating label:last-child .icon {
+    color: #000;
+  }
+  
+  .rating:not(:hover) label input:checked ~ .icon,
+  .rating:hover label:hover input ~ .icon {
+    color: #A0522D;
+  }
+  
+  .rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #A0522D;
+  }
+
+  .small-button{   
+       width: 10%;
+    
+  }
+  
+  @media (max-width: 480px){
+    h1{
+        font-size: 2px;
+    }
+    
+	.login-container {
+	max-width: 350px;
+	}
+    .crud-container {
+        max-width: 300px;
+    }
+    .crud-container img{
+        max-width: 250px; /* Limita a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    .crud-container h1 {
+        font-size: 23px;
+        max-width: 240px;
+        margin-bottom: 10px;
+    }
+    .crud-container input{
+        font-size: 9px;
+    }
+    .crud-container label{
+        font-size: 12px;
+        margin-left: 27px;
+    }
+    .crud-container button{
+        font-size: 14px;
+    }
+    .esconder{
+        display:none;
+    }
+    table th, table td{
+        font-size: 10px;
+    }
+    button.edit, button.delete {
+        font-size: 10px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1024px){
+	.login-container {
+	max-width: 550px;
+	}
+    .login-container img{
+        width: 300px;
+    }
+    .esconder{
+        display:none;
+    }
+    .crud-container img{
+        max-width: 350px; /* Limita a largura máxima da imagem */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    .crud-container label{
+        margin-left: 50px;
+    }}

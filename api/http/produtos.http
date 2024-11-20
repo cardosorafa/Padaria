@@ -35,7 +35,7 @@ PUT {{baseURL}}/1
 Content-Type: application/json
 
 {
-    "COD": 1,
+    "COD": "1",
     "descricao" : "Pao Especial",
     "preco" : 12.50,
     "unidade": "UND",
