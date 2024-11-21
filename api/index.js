@@ -12,7 +12,7 @@ app.use("/", express.static("public"));
 app.use("/favicon.ico", express.static("public/images/icone.jpg"));
 
 app.get("/api", (req, res) => {
-  res.status(200).json({ message: "API Fatec 🚀⭐ ", version: "1.0.0" });
+  res.status(200).json({ message: "API 🚀⭐ ", version: "1.0.0" });
 });
 
 /* Rotas da aplicação */

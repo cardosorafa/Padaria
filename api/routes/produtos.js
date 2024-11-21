@@ -108,7 +108,7 @@ router.delete("/:cod", async (req, res) => {
     const produtos = db.collection("produtos");
     //Obtendo o COD da requisição
     const { cod } = req.params;
-    //Deletando o livro no MongoDB
+    //Deletando o Produto no MongoDB
     const result = await produtos.deleteOne({ COD: cod });
     if (result.deletedCount === 0) {
       return res.status(404).json({

@@ -15,7 +15,7 @@ function carregarProdutos() {
             <td> 
             <button class="delete" onclick="excluirProduto('${produto.COD}')">🗑️ Excluir</button>
 
-            <button onclick="editarLivro('${produto.COD}')">📝 Editar </button>
+            <button onclick="editarProduto('${produto.COD}')">📝 Editar </button>
             </td>
             <td>${produto.COD}</td>
             <td>${produto.descricao}</td>
@@ -32,7 +32,7 @@ function carregarProdutos() {
     .catch((error) => console.error(error.message));
 } /* fecha a function */
 
-//Carregar os livros ao carregar a página
+//Carregar os produtos ao carregar a página
 window.onload = carregarProdutos()
 
 function excluirProduto(COD) {
@@ -155,8 +155,8 @@ document
         }
       })
   })
-function editarLivro(COD) {
-  // Busca os dados do livro específico
+function editarProduto(COD) {
+  // Busca os dados do produto específico
   fetch(`${apiUrl}/id/${COD}`)
     .then(response => response.json())
     .then(data => {
@@ -185,7 +185,7 @@ function editarLivro(COD) {
 				 
       }
 
-      // Preenche o formulário com os dados atuais do livro
+      // Preenche o formulário com os dados atuais do Produto
       document.getElementById("COD").value = produto.COD || '';
       document.getElementById("descricao").value = produto.descricao || "";
       document.getElementById("preco").value = produto.preco || "";
